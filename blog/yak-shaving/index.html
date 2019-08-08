@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Weather graphs on Yak Shaving Day - ascii78&#39;s blog</title>
+  <meta property="og:title" content="Weather graphs on Yak Shaving Day - ascii78&#39;s blog" />
+  <meta name="twitter:title" content="Weather graphs on Yak Shaving Day - ascii78&#39;s blog" />
+  <meta name="description" content="Graphs with Influxy, an influxdb proxy">
+  <meta property="og:description" content="Graphs with Influxy, an influxdb proxy">
+  <meta name="twitter:description" content="Graphs with Influxy, an influxdb proxy">
+  <meta name="author" content="Foo Bar"/>
+  <meta property="og:site_name" content="ascii78&#39;s blog" />
+  <meta property="og:url" content="https://example.com/blog/yak-shaving/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.56.3" />
+
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <link rel="stylesheet" href="/css/bootstrap-grid.css" media="all" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro">
+
+  <script src="/js/script.js"></script>
+  <script src="/js/custom.js"></script>
+  <script defer src="/js/fontawesome.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">ascii78&#39;s blog</a></h1>
+    <ul class="site-navi-items">
+    </ul>
+  </nav>
+</header>
+<hr class="site-header-bottom">
+
+<aside class="toc">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#the-plan">The Plan</a></li>
+<li><a href="#things-i-learned">Things I learned</a></li>
+<li><a href="#the-future">The future</a></li>
+</ul>
+</nav>
+    </aside>
+
+
+  <div class="main" role="main">
+        <article class="article">
+      
+      
+      <h1 class="article-title">Weather graphs on Yak Shaving Day</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>June 17, 2019</time></li>
+      </ul>
+      
+
+<p>It would be quite easy to get temperature and humidity data into a graph with
+some Arduino code , an ESP32 and something like Thingspeak. However where&rsquo;s the
+fun in that ? In this project I&rsquo;ll be using the ESP-IDF framework for the ESP32,
+C on linux to write a proxy for InfluxDB and Grafana to create some graphs.</p>
+
+<p>&hellip;at least, that&rsquo;s what I thought about a year ago. Let me explain, in 2016 i did the arduino bit as described above and created the following gas and weather graphs in a few weeks:</p>
+
+<p><img src="img/Capture.PNG" alt="Capture" />
+<img src="img/Capture2.PNG" alt="Capture2" /></p>
+
+<p>Nice, but a year later I moved to a different location and did not have access to a the rackmounted server in a colocation anymore, which I could use
+for the really high resolution time graphs with influxdb and grafana. Thus the plan was to use my small
+single board computer to do this job, it&rsquo;s an Odroid C1 (similar to Raspberry
+Pi), however after testing grafana and influxdb where just too big running next
+to my Kodi instance. The plan was thus formed to create a small proxy that would
+accept the ESP32 temperature data and push it to my Thinkpad instance of
+influxdb if it was on and store it when it was off.</p>
+
+<p>There was a second reason, I wanted to become a bit more proficient in C,
+especially the latter. Since I&rsquo;m mostly a python user and not a programmer it could have become problematic, but since C is so pervasive in the embedded and
+opensource projects it still made sense for me to learn it. I did learn some C++ before this but I never could wrap my head around it.</p>
+
+<h1 id="the-plan">The Plan</h1>
+
+<p>For this project I wanted to have the dht22 connected to an esp32 using rj45
+wire. The sensor would be outside of the appartment using a drilled hole in the
+wall. Inside the house the esp32 would be mounted on a breadboard and powered
+from a nearby usb charger. Both temperature and data would then be send to
+influx and grafana for graphics. The tricky bit would be that the grafana host
+would not always be on since it resides on my main power hungry PC (150 Watt)
+(now less power hungry thinkpad @ 20w with screen off). The solution would be to
+write a small proxy on my Odroid (5 Watt) that would send the data if the main
+PC was up or store it locally and send it later. See the pretty <a href="https://mermaidjs.github.io/">memaid</a> sequencediagram below for the
+details.</p>
+
+<p><img src="img/sequence.png" alt="1560766344510" /></p>
+
+<p>Since I am the only user and I only watch the grafana stats on my laptop this works. Later I&rsquo;ve removed the steps at 1 hour and 3 hour, now everything is updated when I just open the resume my laptop from suspend.</p>
+
+<h1 id="things-i-learned">Things I learned</h1>
+
+<p>All in all this took me about a year to finish, mostly because of some very minor and somewhat bigger time sinks.</p>
+
+<ul>
+<li><p>Learning C and writing a Linux daemon</p></li>
+
+<li><p>Choosing an IDE and other tools</p></li>
+
+<li><p>Setting up my NeoVim just right</p></li>
+
+<li><p>And ditching it for QtCreator</p></li>
+
+<li><p>Looking for a OneNote replacement</p></li>
+
+<li><p>Debugging a DHT22 protocol firmware error</p></li>
+
+<li><p>DHT22 sensor got water logged</p></li>
+
+<li><p>DHT22 sensor broke down</p></li>
+
+<li><p>Shorting out two ESP32 boards</p></li>
+
+<li><p>Making some nice fritzing images</p></li>
+
+<li><p>Wake on WLAN working, not working</p></li>
+
+<li><p>Using systemd timers instead of Wake on WLAN</p></li>
+
+<li><p>Mysterious WiFi error, caused by a memory leak in an old ESP-IDF version</p></li>
+
+<li><p>Wiring up an ESP32 debugger</p></li>
+
+<li><p>Buying a Bosch BME680 temperature/humidity sensor that will hopefully be better then the DHTxx.</p></li>
+
+<li><p>Making a better enclosure for the sensor part.</p></li>
+
+<li><p>Making a weather display with my Kindle DX.</p></li>
+</ul>
+
+<h1 id="the-future">The future</h1>
+
+<p>During this time I often thought about the term yak shaving, I never managed to look it up but thought it meant that when one would shave a yak you&rsquo;d have to start over by the time you&rsquo;re done (this to the yak having large amounts of magically fast growing hair). It actually means something else, but I&rsquo;m almost done, and I don&rsquo;t have to start over, so that&rsquo;s a good thing. In the coming months I&rsquo;ll be adding some blog posts on these items, for now, here&rsquo;s some pictures.</p>
+
+<p><img src="img/vim.png" alt="img" /></p>
+
+<p><img src="img/qtcreator.png" alt="img" /></p>
+
+<p><img src="img/grafana.png" alt="1560765680614" /></p>
+
+<p><img src="img/kindledx-weather.jpg" alt="1560765356485" /></p>
+
+<p><img src="img/breadboard.jpg" alt="img" /></p>
+
+<p><img src="img/sensor-housing.jpg" alt="1560765487565" /></p>
+
+<p><img src="img/hmmm.jpg" alt="img" /></p>
+
+<p><img src="img/dht-crap.jpg" alt="img" /></p>
+
+    </article></div>
+</body>
+</html>

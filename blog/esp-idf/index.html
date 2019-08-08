@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>IDE options for ESP-IDF - ascii78&#39;s blog</title>
+  <meta property="og:title" content="IDE options for ESP-IDF - ascii78&#39;s blog" />
+  <meta name="twitter:title" content="IDE options for ESP-IDF - ascii78&#39;s blog" />
+  <meta name="description" content="A review of different editors and IDEs for ESP32 programming">
+  <meta property="og:description" content="A review of different editors and IDEs for ESP32 programming">
+  <meta name="twitter:description" content="A review of different editors and IDEs for ESP32 programming">
+  <meta name="author" content="Foo Bar"/>
+  <meta property="og:site_name" content="ascii78&#39;s blog" />
+  <meta property="og:url" content="https://example.com/blog/esp-idf/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.56.3" />
+
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <link rel="stylesheet" href="/css/bootstrap-grid.css" media="all" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro">
+
+  <script src="/js/script.js"></script>
+  <script src="/js/custom.js"></script>
+  <script defer src="/js/fontawesome.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">ascii78&#39;s blog</a></h1>
+    <ul class="site-navi-items">
+    </ul>
+  </nav>
+</header>
+<hr class="site-header-bottom">
+
+<aside class="toc">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#language-server-protocol">Language Server Protocol</a></li>
+<li><a href="#eclipse">Eclipse</a></li>
+<li><a href="#visual-studio">Visual Studio</a></li>
+<li><a href="#vim">Vim</a></li>
+<li><a href="#emacs">Emacs</a></li>
+<li><a href="#qtcreator">QtCreator</a>
+<ul>
+<li><a href="#qmake">QMake</a></li>
+<li><a href="#cmake">CMake</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#debugging">Debugging</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</nav>
+    </aside>
+
+
+  <div class="main" role="main">
+        <article class="article">
+      
+      
+      <h1 class="article-title">IDE options for ESP-IDF</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>July 9, 2019</time></li>
+        <li class="article-meta-tags">
+          <a href="/tags/esp32/">
+            <i class="fas fa-tag"></i>
+            esp32
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/esp-idf/">
+            <i class="fas fa-tag"></i>
+            esp-idf
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/vscode/">
+            <i class="fas fa-tag"></i>
+            vscode
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/neovim/">
+            <i class="fas fa-tag"></i>
+            neovim
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/languageclient/">
+            <i class="fas fa-tag"></i>
+            languageclient
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/qtcreator/">
+            <i class="fas fa-tag"></i>
+            qtcreator
+          </a>&nbsp;
+        </li>
+      </ul>
+      
+
+<p>If you want to develop on ESP32 boards with ESP-IDF there are now several applications you can use as an IDE or editor. In late 2018 I tried several of these options and here are the results so far. Surprisingly Visual Studio Code is overrepresented in this list, I was not aware of this editor up to now but arguably it is quite good.</p>
+
+<h1 id="language-server-protocol">Language Server Protocol</h1>
+
+<p>VSCode also introduced some new nomenclature in the editor world, notably the <a href="https://langserver.org/">Language Server Protocol</a>. This decouples all the programming language specifics from the editor, so an editor only has to implement this protocol to gain access to all to features like tab completion, real time errors etc. It does not need to know anything about the programming language, that is handled by the servers, and they are provided by the community around that particular language. For example Neovim implements LSP as a <a href="https://github.com/autozimu/LanguageClient-neovim">plugin</a> (there are alternatives), it can then talk to a C/C++ client (also multiple alternatives) for example <a href="https://github.com/MaskRay/ccls">ccls</a> that deals with scanning the entire code base, keeping that in memory, and providing all the hooks that Neovim needs to implement the extra features. For Python an entirely different client can be used <a href="https://github.com/Microsoft/python-language-server">python-language-server</a>, but the protocol stays the same. Since all programming and scripting languages seem to be supporting this, most editors are now also jumping on the bandwagon. As of late 2018 I noticed that a lot of editors where still lagging behind VSCode, understandable as VSCode introduced this protocol and it&rsquo;s implementation has a head start and is built into the editor. It will be interesting to see if other editors will pick up the in the future.</p>
+
+<p><img src="index.assets/langserver.png" alt="langserver" /></p>
+
+<p>For now the editors I tested where:</p>
+
+<h1 id="eclipse">Eclipse</h1>
+
+<p>This is the <strong>supported</strong> solution as of now, personally I don&rsquo;t like
+eclipse much since it&rsquo;s a bit too heavy for my taste. If you&rsquo;re working on ESP32 professionally you&rsquo;d probably pick this.</p>
+
+<h1 id="visual-studio">Visual Studio</h1>
+
+<p><img src="index.assets/1562693785144.png" alt="1562693785144" /></p>
+
+<ul>
+<li><p>Platformio with visual studio code: this will download the ESP-IDF
+as one of it&rsquo;s &lsquo;frameworks&rsquo; and provide some python glue logic to any developer
+environment of choice, but usually this is visual studio code. Downside is that platformio sometimes slow on catching up to the latest ESP-IDF release. Also platformio changes the placement of all the
+build files. Things like &ldquo;make menuconfig&rdquo; or not really supported.  Much of the framework you&rsquo;re using is hidden in platformio logic. Paid support is available which gives you access to the (hardware) debugger. <strong>Update Q2-2019: hardware debugger is now free thanks to a sponsorship from Western Digital and SiFive, will be merged into 4.0</strong> <a href="https://community.platformio.org/t/platformio-plus-goes-open-source-improving-embedded-development-community-worldwide/8240">link</a> <a href="https://www.youtube.com/watch?v=psMqilqlrRQ">tutorial</a></p></li>
+
+<li><p>Visual Studio Code + C/CPP extension: This extension is the Microsoft way of integrating C/C++ into it&rsquo;s editor (it sits at the same level as CCLS the language server picture above) you&rsquo;ll have to configure all the include paths yourself  but there is a good <a href="https://github.com/VirgiliaBeatrice/esp32-devenv-vscode/blob/master/tutorial.md">tutorial</a>
+that works really well. Especially with <a href="https://github.com/rizsotto/Bear">bear</a>
+make.</p></li>
+
+<li><p>Visual Studio Code + CMake + CQuery: As we can use CMake in ESP-IDF and there&rsquo;s an extension for it in VSCode I&rsquo;d thought I&rsquo;d use this combination. Remember, CQuery is for the code model and CMake is for the build system. I could not get this combination to work, from the quick inspection that I did there might be a &ldquo;race condition&rdquo; between the two when opening a project.</p></li>
+</ul>
+
+<p>Overall  Visual Studio Code can be made to work, but I noticed that when I added more and more plug-ins (vim for example) everything started to get  quite slow. So I have not pursued it further. If you want to go this route, check out PlatformIO first since it&rsquo;s now a one stop shop for embedded programming.</p>
+
+<h1 id="vim">Vim</h1>
+
+<p><img src="index.assets/1562690583599.png" alt="1562690583599" /></p>
+
+<p>For NeoVim/Vim to work as an IDE you really need language protocol support. That support is getting there but it&rsquo;s still a moving target. If you&rsquo;re not careful you can sink a lot of time in keeping everything updated and checking all the different plugins and language servers. For the time being if you&rsquo;re doing anything C/C++ like just use old style vim with ctags. The screenshot above took quite an amount of work to figure it out and involves almost 20 plugins. You can find the dotfile on my github repo.</p>
+
+<h1 id="emacs">Emacs</h1>
+
+<p>Maybe I should try it sometime.</p>
+
+<h1 id="qtcreator">QtCreator</h1>
+
+<p><img src="img/1560756491536.png" alt="1560756491536" /></p>
+
+<p>QtCreator has been my development environment of choice for my Linux C/C++ work, since it has proper VI mode, in-line C/C++ warnings/errors, tab completion and is pretty fast. It also can use CMake natively.</p>
+
+<h2 id="qmake">QMake</h2>
+
+<p>Initially to get things up and running I copied the way how PlatformIO did it&rsquo;s integration with QT Creator. I came up with a standard template that can be used with QMake. It relies on some hard-coded paths so it&rsquo;s not exactly future proof. You can find it on <a href="https://github.com/ascii78/esp-template-qtcreator">github</a>. This has since been used by developer <a href="https://github.com/allenck">https://github.com/allenck</a> for a GUI tool to create both the .pro and .pro.user files.</p>
+
+<h2 id="cmake">CMake</h2>
+
+<p>Fortunately CMake build support will be integrated in the 4.x branch of ESP-IDF and it&rsquo;s available as a <a href="https://docs.espressif.com/projects/esp-idf/en/feature-cmake/api-guides/build-system.html">preview</a> now in the 3.x branch. With QtCreator 4.8 everything is working quite well now. Just open a project with the CMakeLists.txt provided, all examples should have them included now. You do not have to use a custom xtensa kit, just use whatever you have with your QT/compiler installation.  Next cmake will be configured, it should report &ldquo;CMake project was parsed successfully&rdquo;. If everything worked you should see something like:</p>
+
+<p><strong>Important: if you only choose the xtensa kit, everything from warnings to tab completions will fail</strong></p>
+
+<h2 id="building">Building</h2>
+
+<p>Because there is CMake support you could build your application in Qt Creator as well, however I found that it&rsquo;s easier just to use an external terminal since this gives you direct support for &ldquo;idf.py menuconfig&rdquo; as well. Remember that you can flash your board without leaving monitor mode, just use ctrl+t followed by ctrl+f inside &ldquo;idf.py monitor&rdquo;</p>
+
+<h2 id="debugging">Debugging</h2>
+
+<p>A few months ago I bought a hardware debugger so I could use the JTAG feature for ESP32 boards. It&rsquo;s an FT232H minimodule. Unfortunately I could not get the QT Creator debugger to work. My guess is that the python API it uses to talk to the debugger it too &lsquo;chatty&rsquo; for the xtensa gdb version ESP-IDF is using. After some research I&rsquo;ve found the best option is to use <a href="http://gdbgui.com">gdbgui</a>, a very lightweight wrapper around gdb that provides a nice web interface. To use it follow the documentation on openocd-esp32. Make sure you have a gdbinit file in your project directory containing:</p>
+
+<pre><code>target remote :3333
+set remote hardware-watchpoint-limit 2
+mon reset halt
+flushregs
+thb app_main
+c
+</code></pre>
+
+<p>then run the following commands:</p>
+
+<pre><code> ~/esp/openocd-esp32/bin/openocd -s share/openocd/scripts -f interface/ftdi/minimodule.cfg -f board/esp-wroom-32.cfg
+ gdbgui -g xtensa-esp32-elf-gdb --gdb-args &quot;-x gdbinit&quot;  build/blink.elf
+</code></pre>
+
+<p>That&rsquo;s about it, you&rsquo;ll now get something like this in your browser.</p>
+
+<p><img src="img/1562596365942.png" alt="1562596365942" /></p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>So, after a lengthy excursion in both Visual Studio Code and Neovim I finally settled on Qt Creator, with QMake it now supports ESP-IDF out of the box. The debugger not working is not much of a downside since gdbgui is a really nice alternative. PlatformIO came in as a close second, but I had the feeling it &ldquo;hid&rdquo; a lot of the features of ESP-IDF inside it&rsquo;s python glue layer. I&rsquo;ve also had some minor problems with tab completion, intellisense indexing and other minor problems that sometimes randomly popped up. This, and the fact that after installing my favorite plugins (git, cmake, vim) things just became slow. Slow for me means that the CPU fan on my recent thinkpad is spinning up or that scrolling large amounts of text is just not smooth enough. In regards to vim, which is my default editor for small files I&rsquo;ll be quite interested to see what the plugin landscape will look like in a year or so. For now I&rsquo;m quite happy with QT Creator. There are some more neat vi integration tricks you can do with it, and I&rsquo;ll share them in the future.</p>
+
+    </article></div>
+</body>
+</html>

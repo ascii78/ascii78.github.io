@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qtcreator on ascii78&#39;s blog</title>
+    <link>https://example.com/tags/qtcreator/</link>
+    <description>Recent content in qtcreator on ascii78&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Jul 2019 09:12:26 +0100</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/qtcreator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IDE options for ESP-IDF</title>
+      <link>https://example.com/blog/esp-idf/</link>
+      <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
+      
+      <guid>https://example.com/blog/esp-idf/</guid>
+      <description>If you want to develop on ESP32 boards with ESP-IDF there are now several applications you can use as an IDE or editor. In late 2018 I tried several of these options and here are the results so far. Surprisingly Visual Studio Code is overrepresented in this list, I was not aware of this editor up to now but arguably it is quite good.
+Language Server Protocol VSCode also introduced some new nomenclature in the editor world, notably the Language Server Protocol.</description>
+    </item>
+    
+  </channel>
+</rss>

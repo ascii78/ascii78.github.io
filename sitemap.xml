@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://example.com/projects/</loc>
+    <lastmod>2019-08-08T05:03:57+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2019-08-08T05:03:57+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/projects/fluxyd/</loc>
+    <lastmod>2019-08-08T05:03:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog/esp-idf/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/esp-idf/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/esp-idf/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/esp32/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/esp32/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/languageclient/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/languageclient/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/neovim/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/neovim/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/qtcreator/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/qtcreator/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/vscode/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/vscode/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog/yak-shaving/</loc>
+    <lastmod>2019-06-17T05:03:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/projects/qreplay/</loc>
+    <lastmod>2019-06-17T05:03:57+01:00</lastmod>
+  </url>
+  
+</urlset>
