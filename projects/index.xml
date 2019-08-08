@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on ascii78&#39;s blog</title>
-    <link>https://example.com/projects/</link>
+    <link>https://ascii78.github.io/projects/</link>
     <description>Recent content in Projects on ascii78&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 08 Aug 2019 05:03:57 +0100</lastBuildDate>
     
-	<atom:link href="https://example.com/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ascii78.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>fluxyd</title>
-      <link>https://example.com/projects/fluxyd/</link>
+      <link>https://ascii78.github.io/projects/fluxyd/</link>
       <pubDate>Thu, 08 Aug 2019 05:03:57 +0100</pubDate>
       
-      <guid>https://example.com/projects/fluxyd/</guid>
+      <guid>https://ascii78.github.io/projects/fluxyd/</guid>
       <description>fluxyd is a small multi threaded proxy for the influxdb time series database. It can be used to store incoming tcp requests locally in text files and send them when an influx server is available. No changes to the client are necessary, only timestamps will be injected for each line.
 You can find releases and source on github, report any bugs there.</description>
     </item>
     
     <item>
       <title>qReplay</title>
-      <link>https://example.com/projects/qreplay/</link>
+      <link>https://ascii78.github.io/projects/qreplay/</link>
       <pubDate>Mon, 17 Jun 2019 05:03:57 +0100</pubDate>
       
-      <guid>https://example.com/projects/qreplay/</guid>
+      <guid>https://ascii78.github.io/projects/qreplay/</guid>
       <description>&lt;p&gt;qReplay is an offline replay browser for Wargame Red Dragon. It will show what deck is used by players by parsing replay files.&lt;/p&gt;</description>
     </item>
     

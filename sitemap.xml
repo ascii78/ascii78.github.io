@@ -3,124 +3,124 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/projects/</loc>
+    <loc>https://ascii78.github.io/projects/</loc>
     <lastmod>2019-08-08T05:03:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://ascii78.github.io/</loc>
     <lastmod>2019-08-08T05:03:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/projects/fluxyd/</loc>
+    <loc>https://ascii78.github.io/projects/fluxyd/</loc>
     <lastmod>2019-08-08T05:03:57+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/blog/</loc>
+    <loc>https://ascii78.github.io/blog/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/blog/esp-idf/</loc>
+    <loc>https://ascii78.github.io/blog/esp-idf/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://ascii78.github.io/tags/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/esp-idf/</loc>
+    <loc>https://ascii78.github.io/tags/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/esp-idf/</loc>
+    <loc>https://ascii78.github.io/tags/esp-idf/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/esp32/</loc>
+    <loc>https://ascii78.github.io/tags/esp-idf/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/esp32/</loc>
+    <loc>https://ascii78.github.io/tags/esp32/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/languageclient/</loc>
+    <loc>https://ascii78.github.io/tags/esp32/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/languageclient/</loc>
+    <loc>https://ascii78.github.io/tags/languageclient/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/neovim/</loc>
+    <loc>https://ascii78.github.io/tags/languageclient/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/neovim/</loc>
+    <loc>https://ascii78.github.io/tags/neovim/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/qtcreator/</loc>
+    <loc>https://ascii78.github.io/tags/neovim/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/qtcreator/</loc>
+    <loc>https://ascii78.github.io/tags/qtcreator/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/vscode/</loc>
+    <loc>https://ascii78.github.io/tags/qtcreator/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/vscode/</loc>
+    <loc>https://ascii78.github.io/tags/vscode/</loc>
     <lastmod>2019-07-09T09:12:26+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/blog/yak-shaving/</loc>
+    <loc>https://ascii78.github.io/tags/vscode/</loc>
+    <lastmod>2019-07-09T09:12:26+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ascii78.github.io/blog/yak-shaving/</loc>
     <lastmod>2019-06-17T05:03:57+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/projects/qreplay/</loc>
+    <loc>https://ascii78.github.io/projects/qreplay/</loc>
     <lastmod>2019-06-17T05:03:57+01:00</lastmod>
   </url>
   

@@ -2,65 +2,65 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ascii78&#39;s blog</title>
-    <link>https://example.com/tags/</link>
+    <link>https://ascii78.github.io/tags/</link>
     <description>Recent content in Tags on ascii78&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Jul 2019 09:12:26 +0100</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ascii78.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>esp-idf</title>
-      <link>https://example.com/tags/esp-idf/</link>
+      <link>https://ascii78.github.io/tags/esp-idf/</link>
       <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
       
-      <guid>https://example.com/tags/esp-idf/</guid>
+      <guid>https://ascii78.github.io/tags/esp-idf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>esp32</title>
-      <link>https://example.com/tags/esp32/</link>
+      <link>https://ascii78.github.io/tags/esp32/</link>
       <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
       
-      <guid>https://example.com/tags/esp32/</guid>
+      <guid>https://ascii78.github.io/tags/esp32/</guid>
       <description></description>
     </item>
     
     <item>
       <title>languageclient</title>
-      <link>https://example.com/tags/languageclient/</link>
+      <link>https://ascii78.github.io/tags/languageclient/</link>
       <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
       
-      <guid>https://example.com/tags/languageclient/</guid>
+      <guid>https://ascii78.github.io/tags/languageclient/</guid>
       <description></description>
     </item>
     
     <item>
       <title>neovim</title>
-      <link>https://example.com/tags/neovim/</link>
+      <link>https://ascii78.github.io/tags/neovim/</link>
       <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
       
-      <guid>https://example.com/tags/neovim/</guid>
+      <guid>https://ascii78.github.io/tags/neovim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>qtcreator</title>
-      <link>https://example.com/tags/qtcreator/</link>
+      <link>https://ascii78.github.io/tags/qtcreator/</link>
       <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
       
-      <guid>https://example.com/tags/qtcreator/</guid>
+      <guid>https://ascii78.github.io/tags/qtcreator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vscode</title>
-      <link>https://example.com/tags/vscode/</link>
+      <link>https://ascii78.github.io/tags/vscode/</link>
       <pubDate>Tue, 09 Jul 2019 09:12:26 +0100</pubDate>
       
-      <guid>https://example.com/tags/vscode/</guid>
+      <guid>https://ascii78.github.io/tags/vscode/</guid>
       <description></description>
     </item>
     
