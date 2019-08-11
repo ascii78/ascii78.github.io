@@ -91,25 +91,22 @@ eclipse much since it&rsquo;s a bit too heavy for my taste. If you&rsquo;re work
 <p><img src="index.assets/1562693785144.png" alt="1562693785144" /></p>
 
 <ul>
-<li><p>Platformio with visual studio code: this will download the ESP-IDF
-as one of it&rsquo;s &lsquo;frameworks&rsquo; and provide some python glue logic to any developer
-environment of choice, but usually this is visual studio code. Downside is that platformio sometimes slow on catching up to the latest ESP-IDF release. Also platformio changes the placement of all the
-build files. Things like &ldquo;make menuconfig&rdquo; or not really supported.  Much of the framework you&rsquo;re using is hidden in platformio logic. Paid support is available which gives you access to the (hardware) debugger. <strong>Update Q2-2019: hardware debugger is now free thanks to a sponsorship from Western Digital and SiFive, will be merged into 4.0</strong> <a href="https://community.platformio.org/t/platformio-plus-goes-open-source-improving-embedded-development-community-worldwide/8240">link</a> <a href="https://www.youtube.com/watch?v=psMqilqlrRQ">tutorial</a></p></li>
-
-<li><p>Visual Studio Code + C/CPP extension: This extension is the Microsoft way of integrating C/C++ into it&rsquo;s editor (it sits at the same level as CCLS the language server picture above) you&rsquo;ll have to configure all the include paths yourself  but there is a good <a href="https://github.com/VirgiliaBeatrice/esp32-devenv-vscode/blob/master/tutorial.md">tutorial</a>
+<li>Platformio with visual studio code: platformio is pretty wild, it supports a whole lot of development boards, development frameworks like arduino, mbed and even libraries out of the box. It does this magic by providing some python glue logic to any developer
+environment of choice, in this case visual studio code. The downside of this approach is that Platformio is sometimes slow on catching up to the latest ESP-IDF release. Also Platformio changes the placement of all the
+build files. Things like &ldquo;make menuconfig&rdquo; are not really supported.  Much of the framework you&rsquo;re using is hidden in platformio logic. Paid support is available which gives you access to the (hardware) debugger. <strong>Update Q2-2019: hardware debugger is now free thanks to a sponsorship from Western Digital and SiFive, will be merged into 4.0</strong> <a href="https://community.platformio.org/t/platformio-plus-goes-open-source-improving-embedded-development-community-worldwide/8240">link</a> <a href="https://www.youtube.com/watch?v=psMqilqlrRQ">tutorial</a></li>
+<li>Visual Studio Code + C/CPP extension: This extension is the Microsoft way of integrating C/C++ into it&rsquo;s editor (it sits at the same level as CCLS the language server picture above) you&rsquo;ll have to configure all the include paths yourself  but there is a good <a href="https://github.com/VirgiliaBeatrice/esp32-devenv-vscode/blob/master/tutorial.md">tutorial</a>
 that works really well. Especially with <a href="https://github.com/rizsotto/Bear">bear</a>
-make.</p></li>
-
-<li><p>Visual Studio Code + CMake + CQuery: As we can use CMake in ESP-IDF and there&rsquo;s an extension for it in VSCode I&rsquo;d thought I&rsquo;d use this combination. Remember, CQuery is for the code model and CMake is for the build system. I could not get this combination to work, from the quick inspection that I did there might be a &ldquo;race condition&rdquo; between the two when opening a project.</p></li>
+make.</li>
+<li>Visual Studio Code + CMake + CQuery: As we can use CMake in ESP-IDF and there&rsquo;s an extension for it in VSCode I&rsquo;d thought I&rsquo;d use this combination. Remember, CQuery is for the code model and CMake is for the build system. I could not get this combination to work, from the quick inspection that I did there might be a &ldquo;race condition&rdquo; between the two when opening a project.</li>
 </ul>
 
-<p>Overall  Visual Studio Code can be made to work, but I noticed that when I added more and more plug-ins (vim for example) everything started to get  quite slow. So I have not pursued it further. If you want to go this route, check out PlatformIO first since it&rsquo;s now a one stop shop for embedded programming.</p>
+<p>Overall  Visual Studio Code can be made to work, but I noticed that when I added more and more plug-ins (vim and git for example) everything started to get  quite slow. So I have not pursued it further. If you want to go this route, check out Platformio first since it&rsquo;s now a one stop shop for embedded programming.</p>
 
 <h1 id="vim">Vim</h1>
 
 <p><img src="index.assets/1562690583599.png" alt="1562690583599" /></p>
 
-<p>For NeoVim/Vim to work as an IDE you really need language protocol support. That support is getting there but it&rsquo;s still a moving target. If you&rsquo;re not careful you can sink a lot of time in keeping everything updated and checking all the different plugins and language servers. For the time being if you&rsquo;re doing anything C/C++ like just use old style vim with ctags. The screenshot above took quite an amount of work to figure it out and involves almost 20 plugins. You can find the dotfile on my github repo.</p>
+<p>For NeoVim/Vim to work as an IDE you really need language protocol support. That support is getting there but it&rsquo;s still a moving target. If you&rsquo;re not careful you can sink a lot of time in keeping everything updated and checking all the different plugins and language servers. For the time being if you&rsquo;re doing anything C/C++ like just use old style vim with ctags. The screenshot above took quite an amount of work to figure it out and involves almost 20 plugins.</p>
 
 <h1 id="emacs">Emacs</h1>
 
@@ -159,7 +156,7 @@ c
 
 <h1 id="conclusion">Conclusion</h1>
 
-<p>So, after a lengthy excursion in both Visual Studio Code and Neovim I finally settled on Qt Creator, with QMake it now supports ESP-IDF out of the box. The debugger not working is not much of a downside since gdbgui is a really nice alternative. PlatformIO came in as a close second, but I had the feeling it &ldquo;hid&rdquo; a lot of the features of ESP-IDF inside it&rsquo;s python glue layer. I&rsquo;ve also had some minor problems with tab completion, intellisense indexing and other minor problems that sometimes randomly popped up. This, and the fact that after installing my favorite plugins (git, cmake, vim) things just became slow. Slow for me means that the CPU fan on my recent thinkpad is spinning up or that scrolling large amounts of text is just not smooth enough. In regards to vim, which is my default editor for small files I&rsquo;ll be quite interested to see what the plugin landscape will look like in a year or so. For now I&rsquo;m quite happy with QT Creator. There are some more neat vi integration tricks you can do with it, and I&rsquo;ll share them in the future.</p>
+<p>So, after a lengthy excursion in both Visual Studio Code and Neovim I finally settled on Qt Creator, with CMake it now supports ESP-IDF out of the box. The debugger not working is not much of a downside since gdbgui is a really nice alternative. PlatformIO came in as a close second, but I had the feeling it &ldquo;hid&rdquo; a lot of the features of ESP-IDF inside it&rsquo;s python glue layer. I&rsquo;ve also had some minor problems with tab completion, intellisense indexing and other minor problems that sometimes randomly popped up. This, and the fact that after installing my favorite plugins (git, cmake, vim) things just became slow. Slow for me means that the CPU fan on my recent thinkpad is spinning up or that scrolling large amounts of text is just not smooth enough. In regards to vim, which is my default editor for small files I&rsquo;ll be quite interested to see what the plugin landscape will look like in a year or so. For now I&rsquo;m quite happy with QT Creator. There are some more neat vi integration tricks you can do with it, and I&rsquo;ll share them in the future.</p>
 
     </article></div>
 </body>
